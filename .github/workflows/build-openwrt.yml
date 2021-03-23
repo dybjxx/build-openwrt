@@ -52,20 +52,7 @@ jobs:
     - name: 检测脚本设置
       run: |
         source "${GITHUB_WORKSPACE}/build/${{matrix.target}}/settings.ini"
-        echo "::set-env name=REPO_URL::${REPO_URL}"
-        echo "::set-env name=REPO_BRANCH::${REPO_BRANCH}"
-        echo "::set-env name=CONFIG_FILE::${CONFIG_FILE}"
-        echo "::set-env name=WXFB_MESSAGE::${WXFB_MESSAGE}"
-        echo "::set-env name=DIY_P1_SH::${DIY_P1_SH}"
-        echo "::set-env name=DIY_P2_SH::${DIY_P2_SH}"
-        echo "::set-env name=SSH_ACTIONS::${SSH_ACTIONS}"
-        echo "::set-env name=UPLOAD_BIN_DIR::${UPLOAD_BIN_DIR}"
-        echo "::set-env name=UPLOAD_CONFIG::${UPLOAD_CONFIG}"
-        echo "::set-env name=UPLOAD_FIRMWARE::${UPLOAD_FIRMWARE}"
-        echo "::set-env name=UPLOAD_COWTRANSFER::${UPLOAD_COWTRANSFER}"
-        echo "::set-env name=UPLOAD_RELEASE::${UPLOAD_RELEASE}"
-        echo "::set-env name=SERVERCHAN_SCKEY::${SERVERCHAN_SCKEY}"
-    
+        
     - name: 微信通知
       if: env.SERVERCHAN_SCKEY == 'true'
       uses: emon100/Action-Serverchan@master
