@@ -28,6 +28,8 @@ on:
 #    - cron: 0 8 */5 * *
 
 env: 
+  REPO_BRANCH: master
+  REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
   SCKEY: ${{ secrets.SCKEY }}
   TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
